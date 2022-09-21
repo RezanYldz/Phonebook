@@ -1,0 +1,59 @@
+//{
+//  "Routes": [
+//    {
+//      "DownstreamPathTemplate": "/WeatherForecast",
+//      "DownstreamScheme": "https",
+//      "DownstreamHostAndPorts": [
+//        {
+//          "Host": "localhost",
+//          "Port": 7199
+//        }
+//      ],
+//      "UpstreamPathTemplate": "/getMonths",
+//      "UpstreamPathMethod": [ "Get", "Post" ]
+//    },
+//    {
+//      "DownstreamPathTemplate": "/WeatherForecast",
+//      "DownstreamScheme": "https",
+//      "DownstreamHostAndPorts": [
+//        {
+//          "Host": "localhost",
+//          "Port": 7042
+//        }
+//      ],
+//      "UpstreamPathTemplate": "/getWeathers",
+//      "UpstreamPathMethod": [ "Get", "Post" ]
+//    }
+//  ],
+//  "GlobalConfiguration": {}
+//}
+
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/WeatherForecast",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7199
+        }
+      ],
+      "UpstreamPathTemplate": "/getMonths",
+      "UpstreamHttpMethod": [ "Get", "Post" ]
+    },
+    {
+      "DownstreamPathTemplate": "/WeatherForecast",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7042
+        }
+      ],
+      "UpstreamPathTemplate": "/getWeathers",
+      "UpstreamHttpMethod": [ "Get", "Post" ]
+    }
+  ],
+  "GlobalConfiguration": {}
+}
