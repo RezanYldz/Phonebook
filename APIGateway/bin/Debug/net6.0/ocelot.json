@@ -1,37 +1,7 @@
-//{
-//  "Routes": [
-//    {
-//      "DownstreamPathTemplate": "/WeatherForecast",
-//      "DownstreamScheme": "https",
-//      "DownstreamHostAndPorts": [
-//        {
-//          "Host": "localhost",
-//          "Port": 7199
-//        }
-//      ],
-//      "UpstreamPathTemplate": "/getMonths",
-//      "UpstreamPathMethod": [ "Get", "Post" ]
-//    },
-//    {
-//      "DownstreamPathTemplate": "/WeatherForecast",
-//      "DownstreamScheme": "https",
-//      "DownstreamHostAndPorts": [
-//        {
-//          "Host": "localhost",
-//          "Port": 7042
-//        }
-//      ],
-//      "UpstreamPathTemplate": "/getWeathers",
-//      "UpstreamPathMethod": [ "Get", "Post" ]
-//    }
-//  ],
-//  "GlobalConfiguration": {}
-//}
-
 {
   "Routes": [
     {
-      "DownstreamPathTemplate": "/WeatherForecast",
+      "DownstreamPathTemplate": "/Person",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -39,11 +9,23 @@
           "Port": 7199
         }
       ],
-      "UpstreamPathTemplate": "/getMonths",
-      "UpstreamHttpMethod": [ "Get", "Post" ]
+      "UpstreamPathTemplate": "/person",
+      "UpstreamHttpMethod": [ "Get", "Post","Delete" ]
     },
     {
-      "DownstreamPathTemplate": "/WeatherForecast",
+      "DownstreamPathTemplate": "/PersonInfo",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7199
+        }
+      ],
+      "UpstreamPathTemplate": "/personinfo",
+      "UpstreamHttpMethod": [ "Get", "Post","Delete" ]
+    },
+    {
+      "DownstreamPathTemplate": "/Report",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -52,7 +34,7 @@
         }
       ],
       "UpstreamPathTemplate": "/getWeathers",
-      "UpstreamHttpMethod": [ "Get", "Post" ]
+      "UpstreamHttpMethod": [ "Get", "Post", "Delete" ]
     }
   ],
   "GlobalConfiguration": {}

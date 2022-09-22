@@ -1,7 +1,11 @@
+using Phonebook.Business.Containers.MicrosoftIoC;
+using Phonebook.DAL.Concrete.EntityFrameworkCore.Context;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
+builder.Services.AddDependencies();
+builder.Services.AddDbContext<PhonebookContext>();
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
